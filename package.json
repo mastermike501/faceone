@@ -1,0 +1,24 @@
+{
+    "author": "mastermike501@gmail.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "michael-s-c-watchface",
+    "pebble": {
+        "capabilities": [
+            ""
+        ],
+        "displayName": "Michael's C Watchface",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "uuid": "0eb4744e-c553-405b-8e70-63e8d4ea4ba7",
+        "watchapp": {
+            "watchface": false
+        }
+    },
+    "version": "1.0.0"
+}
