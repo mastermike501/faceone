@@ -12,7 +12,15 @@
         "messageKeys": [],
         "projectType": "native",
         "resources": {
-            "media": []
+            "media": [
+                {
+                    "characterRegex": "[a-zA-Z]",
+                    "file": "fonts/greatvibes.ttf",
+                    "name": "GREATVIBES_28",
+                    "targetPlatforms": null,
+                    "type": "font"
+                }
+            ]
         },
         "sdkVersion": "3",
         "uuid": "0eb4744e-c553-405b-8e70-63e8d4ea4ba7",
