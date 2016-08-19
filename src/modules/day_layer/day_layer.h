@@ -6,4 +6,4 @@ TextLayer* dayLayerInit(GRect bounds);
 
 void dayLayerDeinit();
 
-void setDayText(char*);
+void setDayText(struct tm *time);

@@ -2,8 +2,8 @@
 
 #include <pebble.h>  // Pebble SDK symbols
 
-TextLayer* timeLayerInit(GRect bounds);
+TextLayer* dateLayerInit(GRect bounds);
 
-void timeLayerDeinit();
+void dateLayerDeinit();
 
-void setTimeText(char*);
+void setDateText(struct tm *time);
