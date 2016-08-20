@@ -24,16 +24,18 @@ static void main_window_load(Window *window) {
     Layer *window_layer = window_get_root_layer(window);
     GRect bounds = layer_get_bounds(window_layer);
 
-    TextLayer *s_date_layer = dateLayerInit(bounds);
-    TextLayer *s_workweek_layer = workweekLayerInit(bounds);
-    TextLayer *s_time_layer = timeLayerInit(bounds);
-    TextLayer *s_day_layer = dayLayerInit(bounds);
+    TextLayer *date_layer = dateLayerInit(bounds);
+    TextLayer *workweek_layer = workweekLayerInit(bounds);
+    Layer *battery_layer = batteryLayerInit(bounds);
+    TextLayer *time_layer = timeLayerInit(bounds);
+    TextLayer *day_layer = dayLayerInit(bounds);
 
     // Add it as a child layer to the Window's root layer
-    layer_add_child(window_layer, text_layer_get_layer(s_date_layer));
-    layer_add_child(window_layer, text_layer_get_layer(s_time_layer));
-    layer_add_child(window_layer, text_layer_get_layer(s_workweek_layer));
-    layer_add_child(window_layer, text_layer_get_layer(s_day_layer));
+    layer_add_child(window_layer, text_layer_get_layer(date_layer));
+    layer_add_child(window_layer, text_layer_get_layer(workweek_layer));
+    layer_add_child(window_layer, battery_layer);
+    layer_add_child(window_layer, text_layer_get_layer(time_layer));
+    layer_add_child(window_layer, text_layer_get_layer(day_layer));
 
     update_time();
     tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
@@ -43,6 +45,7 @@ static void main_window_unload(Window *window) {
     // Destroy time elements
     dateLayerDeinit();
     workweekLayerDeinit();
+    batteryLayerDeinit();
     timeLayerDeinit();
     dayLayerDeinit();
 

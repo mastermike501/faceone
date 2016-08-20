@@ -5,13 +5,13 @@ static char s_buffer[7];
 
 TextLayer* workweekLayerInit(GRect bounds) {
     s_layer = text_layer_create(
-      GRect(0, PBL_IF_ROUND_ELSE(15, 10), bounds.size.w, 50));
+      GRect(0, PBL_IF_ROUND_ELSE(10, 0), bounds.size.w, 50));
     
     // Improve the layout to be more like a watchface
     text_layer_set_background_color(s_layer, GColorClear);
     text_layer_set_text_color(s_layer, GColorWhite);
     text_layer_set_text_alignment(s_layer, GTextAlignmentRight);
-    // text_layer_set_font(s_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
+    text_layer_set_font(s_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
 
     return s_layer;
 }

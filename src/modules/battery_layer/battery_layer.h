@@ -2,8 +2,6 @@
 
 #include <pebble.h>  // Pebble SDK symbols
 
-TextLayer* batteryLayerInit(GRect bounds);
+Layer* batteryLayerInit(GRect bounds);
 
 void batteryLayerDeinit();
-
-void setBatteryText(char*);
